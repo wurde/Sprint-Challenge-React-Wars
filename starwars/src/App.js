@@ -4,6 +4,7 @@
  * Dependencies
  */
 
+const url = require('url')
 const React = require('react')
 const components = require('./components/index')
 
@@ -28,7 +29,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
+      nextLink: null
     }
   }
 
@@ -42,37 +44,40 @@ class App extends Component {
         return res.json()
       })
       .then(data => {
-        console.log(data.results[1])
-        this.setState({ starwarsChars: data.results })
+        console.log(data)
+        this.setState({
+          starwarsChars: data.results,
+          nextLink: data.next
+        })
       })
       .catch(err => {
         throw new Error(err)
       })
   }
 
+  nextHandler = () => {
+    this.getCharacters(this.state.nextLink)
+  }
+
   render() {
     return (
-      <div class="jsx-App">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-3">
-              <h1 class="Header">React Wars</h1>
+      <div className="jsx-App">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-3">
+              <h1 className="Header">React Wars</h1>
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-12">
+          <div className="row">
+            <div className="col-12">
               <components.CharacterList starwarsChars={this.state.starwarsChars} />
             </div>
           </div>
 
-          <div class="row justify-content-center">
-            <div class="col-2 d-flex justify-content-center">
-              <button class="Button">Prev</button>
-            </div>
-
-            <div class="col-2 d-flex justify-content-center">
-              <button class="Button">Next</button>
+          <div className="row justify-content-center">
+            <div className="col-12 d-flex justify-content-center">
+              <button className="Button" onClick={this.nextHandler}>Next</button>
             </div>
           </div>
         </div>

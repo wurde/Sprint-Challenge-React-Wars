@@ -18,7 +18,7 @@ require('./Character.scss')
 
 function Character(props) {
   return (
-    <div class="jsx-Character col-2">
+    <div className="jsx-Character col-2">
       <ul>
         <li><strong>Name:</strong> {props.details.name}</li>
         <li><strong>Birth year:</strong> {props.details.birth_year}</li>
