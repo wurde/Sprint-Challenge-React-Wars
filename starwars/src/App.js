@@ -52,8 +52,14 @@ class App extends Component {
   render() {
     return (
       <div className="jsx-App">
-        <h1 className="Header">React Wars</h1>
-        <components.CharacterList starwarsChars={this.state.starwarsChars} />
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1 className="Header">React Wars</h1>
+              <components.CharacterList starwarsChars={this.state.starwarsChars} />
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
