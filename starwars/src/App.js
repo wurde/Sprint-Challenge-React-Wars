@@ -5,6 +5,7 @@
  */
 
 const React = require('react')
+const components = require('./components/index')
 
 /**
  * Constants
@@ -52,6 +53,7 @@ class App extends Component {
     return (
       <div className="jsx-App">
         <h1 className="Header">React Wars</h1>
+        <components.CharacterList starwarsChars={this.state.starwarsChars} />
       </div>
     )
   }
