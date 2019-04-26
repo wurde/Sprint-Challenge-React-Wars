@@ -65,6 +65,16 @@ class App extends Component {
               <components.CharacterList starwarsChars={this.state.starwarsChars} />
             </div>
           </div>
+
+          <div class="row justify-content-center">
+            <div class="col-2 d-flex justify-content-center">
+              <button class="Button">Prev</button>
+            </div>
+
+            <div class="col-2 d-flex justify-content-center">
+              <button class="Button">Next</button>
+            </div>
+          </div>
         </div>
       </div>
     )
