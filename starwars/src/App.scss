@@ -44,6 +44,18 @@
     cursor: pointer;
     width: 30%;
     font-size: 25px;
+
+  }
+  .Button--disabled {
+    padding: 10px;
+    background-color: $color-white;
+    color: #888;
+    border-radius: 5px;
+    margin: 10px;
+    width: 30%;
+    font-size: 25px;
+    pointer-events: none;
+    cursor: inherit;
   }
   .Button:hover {
     background-color: #DDD;

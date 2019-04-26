@@ -4,7 +4,6 @@
  * Dependencies
  */
 
-const url = require('url')
 const React = require('react')
 const components = require('./components/index')
 
@@ -83,11 +82,11 @@ class App extends Component {
 
           <div className="row justify-content-between">
             <div className="col-4 d-flex justify-content-center">
-              <button className="Button" onClick={this.nextHandler}>Previous</button>
+              <button className={(!this.state.prevLink) ? 'Button--disabled' : 'Button'} onClick={this.prevHandler}>Previous</button>
             </div>
 
             <div className="col-4 d-flex justify-content-center">
-              <button className="Button" onClick={this.nextHandler}>Next</button>
+              <button className={(!this.state.nextLink) ? 'Button--disabled' : 'Button'} onClick={this.nextHandler}>Next</button>
             </div>
           </div>
         </div>
