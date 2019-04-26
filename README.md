@@ -24,13 +24,21 @@ In this challenge, create a web page that presents a styled list of Star Wars ch
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
+- [x] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
-- [ ] What does it mean to _think_ in react?
+React is a JavaScript UI library built by Facebook to solve problems they were facing at scale and open sourced for public use. It is the View (V) of Model-View-Controller (MVC) architecture. Some of the problems React tries to solve include managing complex state, enabling code reusability, and improving performance. As a frontend library React saves us from large HTTP requests by managing state on the client. Component-based design allows you to compose applications with reusable code. Since React can maintain complex client-side state and manipulate things via a virtual DOM we can reduce most HTTP requests down to small JSON messages with our backend server (GraphQL).
 
-- [ ] Describe state.
+- [x] What does it mean to _think_ in react?
 
-- [ ] Describe props.
+React is a departure from traditional web development and requires adopting a new ways of thinking about your web applications. Some of those changes include component-based design, controlled inputs, and immutable state.
+
+- [x] Describe state.
+
+State is data associated with your React application. It can "flow down" to child components via `props`. We can "lift state up" from child components to ancestor components. With React state we can avoid reaching into the DOM and managing state there.
+
+- [x] Describe props.
+
+Props allows us to "flow down" state to child components. They are the arguments to `functional components`.
 
 ## Project Set Up
 
@@ -83,7 +91,6 @@ getCharacters = URL => {
 Your data set will look like this:
 
 ![Star Wars state data](starwars_data.png)
-
 
 ## Minimum Viable Product
 
