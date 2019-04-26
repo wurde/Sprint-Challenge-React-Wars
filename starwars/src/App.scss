@@ -1,0 +1,66 @@
+/**
+ * Style variables
+ */
+
+@import 'styles/variables.scss';
+
+/**
+ * Reset and reboot styles
+ */
+
+@import './styles/reset.scss';
+@import './styles/reboot.scss';
+
+/**
+ * Grid framework using class-based styles
+ */
+
+@import './styles/grid.scss';
+@import './styles/flex.scss';
+
+/**
+ * Component styles
+ */
+
+.jsx-App {
+  margin-bottom: 30px;
+
+  .Header {
+    background-color: $color-black;
+    color: $color-cream-can;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 900;
+    padding: 10px;
+    margin: 15px 0px;
+    border-radius: 5px;
+  }
+
+  .Button {
+    padding: 10px;
+    background-color: $color-white;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    width: 30%;
+    font-size: 25px;
+
+  }
+  .Button--disabled {
+    padding: 10px;
+    background-color: $color-white;
+    color: #888;
+    border-radius: 5px;
+    margin: 10px;
+    width: 30%;
+    font-size: 25px;
+    pointer-events: none;
+    cursor: inherit;
+  }
+  .Button:hover {
+    background-color: #DDD;
+  }
+  .Button:active {
+    background-color: #999;
+  }
+}

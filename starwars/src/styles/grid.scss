@@ -1,0 +1,105 @@
+/**
+ * Grid styles
+ * Description: A reusable class-based mobile-first grid layout.
+ *
+ * Display: Flexbox
+ * Number of columns: 12
+ * Gutter width: 30px (15px on each side of a column)
+ * Breakpoints: 5 [col-sm ≥ 576px, col-md ≥ 768px, col-lg ≥ 992px, col-xl ≥ 1200px]
+ * Nestable: true
+ * Column ordering: true
+ */
+
+/*
+  Variables
+*/
+
+$gutter: 30px;
+$grid-breakpoint-md: 768px;
+$container-max-width-md: 720px;
+
+/*
+  Container classes
+*/
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Re-usable class-based CSS styles for the grid */
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+
+  .col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
+    padding-left: ($gutter / 2);
+    padding-right: ($gutter / 2);
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+
+  .col-11 {
+    width: 91.6666666667%;
+  }
+
+  .col-10 {
+    width: 83.3333333333%;
+  }
+
+  .col-9 {
+    width: 75%;
+  }
+
+  .col-8 {
+    width: 66.6666666667%;
+  }
+
+  .col-7 {
+    width: 58.3333333333%;
+  }
+
+  .col-6 {
+    width: 50%;
+  }
+
+  .col-5 {
+    width: 41.6666666667%;
+  }
+
+  .col-4 {
+    width: 33.333333%;
+  }
+
+  .col-3 {
+    width: 25%;
+  }
+
+  .col-2 {
+    width: 16.6666666667%;
+  }
+
+  .col-1 {
+    width: 8.3333333333%;
+  }
+}
+
+/**
+ * Mobile styles
+ */
+
+@media (max-width: $grid-breakpoint-md) {
+  .container {
+    max-width: $container-max-width-md;
+  }
+
+  .row {
+    .col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
+      width: 100%;
+    }
+  }
+}
