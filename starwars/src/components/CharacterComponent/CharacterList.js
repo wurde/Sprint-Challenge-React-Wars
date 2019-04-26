@@ -19,9 +19,11 @@ require('./CharacterList.scss')
 
 function CharacterList(props) {
   return (
-    <ul class="jsx-CharacterList">
-      {props.starwarsChars.map(char => (<Character details={char} />))}
-    </ul>
+    <div class="jsx-CharacterList">
+      <div class="row justify-content-center">
+        {props.starwarsChars.map(char => (<Character details={char} />))}
+      </div>
+    </div>
   )
 }
 

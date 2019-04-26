@@ -15,8 +15,8 @@
 */
 
 $gutter: 30px;
-$grid-breakpoint-sm: 576px;
-$container-max-width-sm: 540px;
+$grid-breakpoint-md: 768px;
+$container-max-width-md: 720px;
 
 /*
   Container classes
@@ -92,9 +92,9 @@ $container-max-width-sm: 540px;
  * Mobile styles
  */
 
-@media (max-width: $grid-breakpoint-sm) {
+@media (max-width: $grid-breakpoint-md) {
   .container {
-    max-width: $container-max-width-sm;
+    max-width: $container-max-width-md;
   }
 
   .row {
