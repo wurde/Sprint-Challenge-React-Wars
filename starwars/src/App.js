@@ -30,6 +30,7 @@ class App extends Component {
     super()
     this.state = {
       starwarsChars: [],
+      prevLink: null,
       nextLink: null
     }
   }
@@ -47,12 +48,17 @@ class App extends Component {
         console.log(data)
         this.setState({
           starwarsChars: data.results,
+          prevLink: data.previous,
           nextLink: data.next
         })
       })
       .catch(err => {
         throw new Error(err)
       })
+  }
+
+  prevHandler = () => {
+    this.getCharacters(this.state.prevLink)
   }
 
   nextHandler = () => {
@@ -75,8 +81,12 @@ class App extends Component {
             </div>
           </div>
 
-          <div className="row justify-content-center">
-            <div className="col-12 d-flex justify-content-center">
+          <div className="row justify-content-between">
+            <div className="col-4 d-flex justify-content-center">
+              <button className="Button" onClick={this.nextHandler}>Previous</button>
+            </div>
+
+            <div className="col-4 d-flex justify-content-center">
               <button className="Button" onClick={this.nextHandler}>Next</button>
             </div>
           </div>
